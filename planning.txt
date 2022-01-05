@@ -1,0 +1,17 @@
+- App
+    - Nav
+      ~ Site name(will also take you to home screen)
+      ~ About - Gives description of application 
+      ~ STRETCH GOAL -- Search bar (input form with button)
+
+    - Main
+      - 3 Random Recipes component (fetch for random recipes)
+        ~ img of Recipe
+        ~ imgs are clickable and will take you to Recipe Details page
+        ~ button to generate a random recipe
+    
+    - Recipe Details
+        ~ recipe title, img, and summary displayed 
+          - Recipe instructions component
+          - Recipe Ingredients component
+        

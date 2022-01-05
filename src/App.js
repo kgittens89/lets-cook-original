@@ -7,13 +7,13 @@ import RecipeDetails from './Components/RecipeDetails/RecipeDetails';
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      
+    <div>
+    <Nav />
+    
     <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/:id" element={<RecipeDetails />} />
-        <Route path="/about" element={<About />} />
+      <Route path="/" element={<Main />} />
+      <Route path="/:id" element={<RecipeDetails />} />
+      <Route path="/about" element={<About />} />
     </Routes>
     
     </div>

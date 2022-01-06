@@ -14,8 +14,10 @@ function Main({randomRecipes}) {
 					{randomRecipes.map((recipe) => {
 						return (
 							<Link to={`/${recipe.id}`} key={recipe.id}>
-								<h2>{recipe.title}</h2>
-								<img src={recipe.image} alt={recipe.title} />
+								<div className="img-card">
+									<img src={recipe.image} alt={recipe.title} />
+									<h2>{recipe.title}</h2>
+								</div>
 							</Link>
 						);
 					})}

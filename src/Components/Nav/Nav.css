@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7em 6em;
+}
+
+nav h1 {
+    font-size: 2em;
+    padding: 0.3em;
+    color: #e63946;
+    border: #457b9d 2px solid;
+    background-color: #f1faee;
+}
+
+nav p {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #e63946;
+    text-decoration: underline;
+}
+
+/* * {
+    border: 2px solid black;
+} */

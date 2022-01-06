@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './Main.css';
 
 function Button(props) {
 	const [randomRecipe, setRandomRecipe] = useState([]);
@@ -16,7 +17,7 @@ function Button(props) {
 	// 	}, []);
 
 	return (
-		<div>
+		<div className="random-btn">
 			<Link to={`${randomRecipe.id}`}>Randomize</Link>
 		</div>
 	);

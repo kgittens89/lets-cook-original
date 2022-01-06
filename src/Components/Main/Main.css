@@ -1,0 +1,15 @@
+.random-recipe-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.random-recipe-card a {
+    padding: 1em;
+    border: 2px solid black;
+}
+
+.random-recipe-card img {
+    max-width: 100%;
+    height: auto;
+    background: #fff;
+}

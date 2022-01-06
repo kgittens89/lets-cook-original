@@ -6,8 +6,10 @@ import Nav from './Components/Nav/Nav';
 import Main from './Components/Main/Main';
 import RecipeDetails from './Components/RecipeDetails/RecipeDetails';
 
+import randomRecipes1 from './data.json';
+
 function App() {
-	const [randomRecipes, setRandomRecipes] = useState([]);
+	const [randomRecipes, setRandomRecipes] = useState(randomRecipes1);
 
 	// useEffect(() => {
 	//     fetchRandomRecipes(3);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import recipe1 from '../../data.json'
+// import recipe1 from '../../data.json'
+import Instructions from './Instructions';
 
 function RecipeDetails(props) {
     const [recipe, setRecipe] = useState(null)
@@ -8,9 +9,9 @@ function RecipeDetails(props) {
     const { id } = useParams()
 
     // console.log(recipeSteps)
-    useEffect(() => {
-        getRecipeDetails()
-    }, [])
+    // useEffect(() => {
+    //     getRecipeDetails()
+    // }, [])
 
     const getRecipeDetails = () => {
         fetch(
@@ -20,7 +21,7 @@ function RecipeDetails(props) {
 					.then((res) => {
                         console.log(res);
                         setRecipe(res)
-                        setRecipeSteps([res.analyzedInstructions[0].steps[0]]);
+                        setRecipeSteps([res.analyzedInstructions[0].steps]);
 					});
     }
 
@@ -39,9 +40,10 @@ function RecipeDetails(props) {
             
             <h4>Instructions</h4>
             <ol>
-                {recipeSteps.map((step) => {
+                {/* {recipeSteps.map((step) => {
                     return <li>{step.step}</li>;
-                })}
+                })} */}
+                <Instructions recipeSteps={recipeSteps}/>
             </ol>
 			</div>
 		);

@@ -11,7 +11,10 @@ function Main({randomRecipes}) {
         <div>
         {randomRecipes.map((recipe) => {
             return (
-                <Link to={`/${recipe.id}`} key={recipe.id}><img src={recipe.image} alt="" /></Link>
+                <Link to={`/${recipe.id}`} key={recipe.id}>
+                    <h2>{ recipe.title }</h2>
+                    <img src={recipe.image} alt={recipe.title} />
+                </Link>
                 )
         })}
             <Button />

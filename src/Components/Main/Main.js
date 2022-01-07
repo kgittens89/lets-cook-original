@@ -2,9 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from './Button';
 
+import useFetchRandom from '../../hooks/useFetchRandom';
 import './Main.css'
 
-function Main({randomRecipes}) { 
+function Main() { 
+	const randomRecipes = useFetchRandom();
+	
     if (!randomRecipes) {
         return <p>Loading...</p>
     }
@@ -22,7 +25,7 @@ function Main({randomRecipes}) {
 						);
 					})}
 				</div>
-					<Button />
+				<Button />
 			</>
 		);
         }

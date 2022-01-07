@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Instructions({recipeSteps}) {
+function Instructions({ recipeSteps }) {
+
     return (
         <>
             {recipeSteps.map((step) => {
                 return (
-                    <li>{step.step}</li>
+                    <li key={step.number}>{step.step}</li>
                 )
             })}
         </>

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Ingredients from './Ingredients';
 // import recipe1 from '../../data.json'
 import Instructions from './Instructions';
+import './RecipeDetails.css';
 
 function RecipeDetails(props) {
     const [recipe, setRecipe] = useState(null)
@@ -10,7 +11,6 @@ function RecipeDetails(props) {
     const [ingredients, setIngredients] = useState([])
     const { id } = useParams()
 
-    console.log(recipeSteps)
     useEffect(() => {
         getRecipeDetails()
     }, [])
@@ -44,7 +44,7 @@ function RecipeDetails(props) {
 				<h4>Instructions</h4>
 				<ol>
 					{!recipeSteps ? (
-						<p>Loadin...</p>
+						<p>Loading...</p>
 					) : (
 						<Instructions recipeSteps={recipeSteps} />
 					)}
@@ -53,7 +53,7 @@ function RecipeDetails(props) {
 					{!ingredients ? (
 						<p>Loading...</p>
 					) : (
-						<Ingredients ingredient={ingredients} />
+						<Ingredients ingredients={ingredients} />
 					)}
 				</ul>
 			</div>

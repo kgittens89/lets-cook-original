@@ -4,8 +4,8 @@ function Ingredients({ ingredients }) {
     return (
         <>
                 {ingredients.map((ingredient) => {
-                    return (
-                        <li>{ingredient.original}</li>
+                    return ( 
+                        <li key={ingredient.id}>{ingredient.originalString}</li>
                     )
                 })}          
         </>

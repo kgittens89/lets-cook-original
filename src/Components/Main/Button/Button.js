@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Main.css';
+import '../Main.css';
 
 function Button(props) {
 	const [randomRecipe, setRandomRecipe] = useState([]);

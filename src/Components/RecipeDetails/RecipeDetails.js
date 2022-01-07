@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 // import recipe1 from '../../data.json'
-import Ingredients from './Ingredients';
-import Instructions from './Instructions';
+import Ingredients from './ExtraData/Ingredients';
+import Instructions from './ExtraData/Instructions';
 import './RecipeDetails.css';
 
 function RecipeDetails(props) {

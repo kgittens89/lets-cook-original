@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import About from './Components/Nav/About';
-import Nav from './Components/Nav/Nav';
-import Main from './Components/Main/Main';
-import RecipeDetails from './Components/RecipeDetails/RecipeDetails';
+import About from './components/Nav/About/About';
+import Nav from './components/Nav/Nav';
+import Main from './components/Main/Main';
+import RecipeDetails from './components/RecipeDetails/RecipeDetails';
 
 
 function App() {

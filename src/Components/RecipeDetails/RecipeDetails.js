@@ -6,7 +6,7 @@ import Ingredients from './ExtraData/Ingredients';
 import Instructions from './ExtraData/Instructions';
 import './RecipeDetails.css';
 
-function RecipeDetails() {
+function RecipeDetails(props) {
     const [recipe, setRecipe] = useState(null)
     const [recipeSteps, setRecipeSteps] = useState([])
     const [ingredients, setIngredients] = useState([])
@@ -35,7 +35,6 @@ function RecipeDetails() {
     }
     return (
 		<div>
-			{/* change this to h2 later */}
 				<h2>{recipe.title}</h2> 
 				<img src={recipe.image} alt={recipe.title} />
 

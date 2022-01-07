@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.css'
 
-function Nav(props) {
+function Nav() {
     return (
 			<nav>
 				<Link to='/'>
@@ -10,7 +10,7 @@ function Nav(props) {
 				</Link>
 
 				<Link to='/about'>
-					<p>About</p>
+					<h2>About</h2>
 				</Link>
 			</nav>
 		);

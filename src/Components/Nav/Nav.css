@@ -19,12 +19,11 @@ nav h1 {
     background-color: var(--secondary-color);
 }
 
-nav p {
+nav h2 {
     font-size: 1.4em;
     font-weight: 600;
     padding: 0.2em 0.4em;
     color: var(--third-color);
-    text-decoration: underline;
     border: var(--primary-color) 2px solid;
     background-color: var(--secondary-color);
 }

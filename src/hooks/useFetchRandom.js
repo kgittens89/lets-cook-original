@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-function useFetchRandom(props) {
+function useFetchRandom(num = 3) {
     const [randomRecipes, setRandomRecipes] = useState([]);
     
     useEffect(() => {
-        fetchRandomRecipes(3);
+        fetchRandomRecipes(num);
     }, []);
     
     const fetchRandomRecipes = (num) => {

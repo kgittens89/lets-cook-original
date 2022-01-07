@@ -6,14 +6,15 @@ import Ingredients from './ExtraData/Ingredients';
 import Instructions from './ExtraData/Instructions';
 import './RecipeDetails.css';
 
-function RecipeDetails(props) {
+function RecipeDetails() {
     const [recipe, setRecipe] = useState(null)
     const [recipeSteps, setRecipeSteps] = useState([])
     const [ingredients, setIngredients] = useState([])
     const { id } = useParams()
 
     useEffect(() => {
-        getRecipeDetails()
+		getRecipeDetails()
+		//eslint-disable-next-line
     }, [])
 
     const getRecipeDetails = () => {
@@ -33,9 +34,10 @@ function RecipeDetails(props) {
         return <p>Loading...</p>
     }
     return (
-			<div>
-				<h1>{recipe.title}</h1>
-				<img src={recipe.image} alt='' />
+		<div>
+			{/* change this to h2 later */}
+				<h2>{recipe.title}</h2> 
+				<img src={recipe.image} alt={recipe.title} />
 
 				{/* Link used to take html tags out of string.
             https://www.geeksforgeeks.org/how-to-strip-out-html-tags-from-a-string-using-javascript/ */}
@@ -43,20 +45,16 @@ function RecipeDetails(props) {
 				<p>{recipe.summary.replace(/(<([^>]+)>)/gi, '')}</p>
 
 				<h4>Instructions</h4>
-				<ol>
 					{!recipeSteps ? (
 						<p>Loading...</p>
 					) : (
 						<Instructions recipeSteps={recipeSteps} />
 					)}
-				</ol>
-				<ul>
 					{!ingredients ? (
 						<p>Loading...</p>
 					) : (
 						<Ingredients ingredients={ingredients} />
 					)}
-				</ul>
 			</div>
 		);
 }

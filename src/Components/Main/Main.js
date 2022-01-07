@@ -6,9 +6,9 @@ import useFetchRandom from '../../hooks/useFetchRandom';
 import './Main.css'
 
 function Main() { 
-	const randomRecipes = useFetchRandom();
+	const randomRecipes = useFetchRandom(3);
 	
-    if (!randomRecipes) {
+    if (!randomRecipes.length) {
         return <p>Loading...</p>
     }
     return (

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Ingredients from './Ingredients';
+
 // import recipe1 from '../../data.json'
+import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import './RecipeDetails.css';
 

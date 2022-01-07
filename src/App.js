@@ -9,11 +9,11 @@ import RecipeDetails from './Components/RecipeDetails/RecipeDetails';
 import randomRecipes1 from './data.json';
 
 function App() {
-	const [randomRecipes, setRandomRecipes] = useState(randomRecipes1);
+	const [randomRecipes, setRandomRecipes] = useState([]);
 
-	// useEffect(() => {
-	//     fetchRandomRecipes(3);
-	// }, [])
+	useEffect(() => {
+	    fetchRandomRecipes(3);
+	}, [])
 
 	const fetchRandomRecipes = (num) => {
 		let url = `https://api.spoonacular.com/recipes/random?number=${num}&apiKey=${process.env.REACT_APP_API_KEY}`;

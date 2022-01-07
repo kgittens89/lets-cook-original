@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #457b9d;
+    --secondary-color: #E3E3E3;
+    --third-color: #E63946;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -8,16 +14,19 @@ nav {
 nav h1 {
     font-size: 2em;
     padding: 0.3em;
-    color: #e63946;
-    border: #457b9d 2px solid;
-    background-color: #f1faee;
+    color: var(--third-color);
+    border: var(--primary-color) 2px solid;
+    background-color: var(--secondary-color);
 }
 
 nav p {
     font-size: 1.4em;
     font-weight: 600;
-    color: #e63946;
+    padding: 0.2em 0.4em;
+    color: var(--third-color);
     text-decoration: underline;
+    border: var(--primary-color) 2px solid;
+    background-color: var(--secondary-color);
 }
 
 /* * {

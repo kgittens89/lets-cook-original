@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-// import recipe1 from '../../data.json'
 import Ingredients from './ExtraData/Ingredients';
 import Instructions from './ExtraData/Instructions';
 import styles from './RecipeDetails.module.css';
-import brownBagImage from '../brown_bag.jpeg';
+import brownBagImage from '../brown.jpeg';
 import mainImage from '../nordwood-themes-Tmz8FThN_BE-unsplash.jpg'
 
 function RecipeDetails(props) {
@@ -17,11 +16,11 @@ function RecipeDetails(props) {
     useEffect(() => {
 		getRecipeDetails();
 		document.body.style.backgroundImage = `url(${brownBagImage})`; 
-		//eslint-disable-next-line
-
+		
 		return () => {
 			document.body.style.backgroundImage = `url(${mainImage})`;
 		}
+		//eslint-disable-next-line
     }, [])
 
     const getRecipeDetails = () => {

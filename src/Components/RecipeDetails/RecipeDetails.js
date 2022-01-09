@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom';
 // import recipe1 from '../../data.json'
 import Ingredients from './ExtraData/Ingredients';
 import Instructions from './ExtraData/Instructions';
-import './RecipeDetails.css';
+import styles from './RecipeDetails.module.css';
+import brownBagImage from '../brown_bag.jpeg';
+import mainImage from '../nordwood-themes-Tmz8FThN_BE-unsplash.jpg'
 
 function RecipeDetails(props) {
     const [recipe, setRecipe] = useState(null)
@@ -13,8 +15,13 @@ function RecipeDetails(props) {
     const { id } = useParams()
 
     useEffect(() => {
-		getRecipeDetails()
+		getRecipeDetails();
+		document.body.style.backgroundImage = `url(${brownBagImage})`; 
 		//eslint-disable-next-line
+
+		return () => {
+			document.body.style.backgroundImage = `url(${mainImage})`;
+		}
     }, [])
 
     const getRecipeDetails = () => {
@@ -34,26 +41,30 @@ function RecipeDetails(props) {
         return <p>Loading...</p>
     }
     return (
-		<div>
-				<h2>{recipe.title}</h2> 
-				<img src={recipe.image} alt={recipe.title} />
+			<div className={styles.details}>
+				<div className={styles.upper_section}>
+					<h2 className={styles.title}>{recipe.title}</h2>
+					<img src={recipe.image} alt={recipe.title} className={styles.img} />
 
-				{/* Link used to take html tags out of string.
+					{/* Link used to take html tags out of string.
             https://www.geeksforgeeks.org/how-to-strip-out-html-tags-from-a-string-using-javascript/ */}
 
-				<p>{recipe.summary.replace(/(<([^>]+)>)/gi, '')}</p>
-
-				<h4>Instructions</h4>
-					{!recipeSteps ? (
-						<p>Loading...</p>
-					) : (
-						<Instructions recipeSteps={recipeSteps} />
-					)}
+					<p className={styles.summary}>{recipe.summary.replace(/(<([^>]+)>)/gi, '')}</p>
+				</div>
+				<div className={styles.bottom_section}>
+					<h4>Ingredients</h4>
 					{!ingredients ? (
 						<p>Loading...</p>
 					) : (
 						<Ingredients ingredients={ingredients} />
 					)}
+					<h4>Instructions</h4>
+					{!recipeSteps ? (
+						<p>Loading...</p>
+					) : (
+						<Instructions recipeSteps={recipeSteps} />
+					)}
+				</div>
 			</div>
 		);
 }

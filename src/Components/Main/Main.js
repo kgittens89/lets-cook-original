@@ -8,11 +8,12 @@ import './Main.css'
 function Main() { 
 	const randomRecipes = useFetchRandom(3);
 	
-    if (!randomRecipes.length) {
+    if (!randomRecipes) {
         return <p>Loading...</p>
     }
     return (
-			<>
+		<>
+			<h2>Current Random Suggestions</h2>
 				<div className='random-recipe-card'>
 					{randomRecipes.map((recipe) => {
 						return (

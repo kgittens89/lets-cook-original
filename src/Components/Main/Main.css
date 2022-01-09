@@ -1,7 +1,19 @@
-:root {
+/* :root {
     --primary-color: #457b9d;
-    --secondary-color: #E3E3E3;
+    --secondary-color: #EEEFE9;
     --third-color: #e63946
+} */
+
+/* :root {
+    --primary-color: #457b9d;
+    --secondary-color: #B4A59D;
+    --third-color: #C00201;
+} */
+
+:root {
+    --primary-color: #645E59;
+    --secondary-color: #EEEFE9;
+    --third-color: #F7644D;
 }
 
 .random-recipe-card {
@@ -10,6 +22,7 @@
     display: flex;
     justify-content: center;
     margin: 2em 13em;
+    padding: 1em;
 }
 
 .random-recipe-card a {
@@ -24,7 +37,7 @@
 
 .img-card {
     height: 100%;
-    width: 80%;
+    width: 100%;
     min-width: 200px;
     background-color: var(--secondary-color);
     display: flex;
@@ -35,7 +48,7 @@
 }
 
 .random-btn a {
-    color: var(--primary-color);
+    color: var(--third-color);
     border: var(--primary-color) 2px solid;
     background-color: var(--secondary-color);
     font-size: 1.5em;

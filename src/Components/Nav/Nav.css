@@ -1,8 +1,8 @@
-:root {
+/* :root {
     --primary-color: #457b9d;
     --secondary-color: #E3E3E3;
     --third-color: #E63946;
-}
+} */
 
 nav {
     display: flex;
@@ -26,6 +26,14 @@ nav h2 {
     color: var(--third-color);
     border: var(--primary-color) 2px solid;
     background-color: var(--secondary-color);
+}
+
+.about {
+    background-color: #E3E3E3;
+    border: 1px solid var(--primary-color);
+    padding: 1em;
+    margin: 1em;
+    font-size: 1.1em;
 }
 
 /* * {
